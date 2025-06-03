@@ -29,7 +29,7 @@ export default function AboutPage() {
 {
   title: "Internship",
   company: "Nextpak Agile",
-  period: "2019 - 2020",
+  period: "2024 july - 2024 Dev",
   description:
     "Contributed to MVP development and learned modern web technologies in an agile environment.",
 }
