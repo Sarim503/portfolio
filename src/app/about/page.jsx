@@ -152,15 +152,15 @@ export default function AboutPage() {
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
                       <Mail className="h-5 w-5 text-primary" />
-                      <span>alex.johnson@email.com</span>
+                      <span>sarim.khan50503@email.com</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="h-5 w-5 text-primary" />
-                      <span>+1 (555) 123-4567</span>
+                      <span>+923355080503</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <MapPin className="h-5 w-5 text-primary" />
-                      <span>San Francisco, CA</span>
+                      <span>Bahria Town,islambad</span>
                     </div>
                   </div>
                 </div>
