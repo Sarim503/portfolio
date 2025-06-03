@@ -33,7 +33,7 @@ export default function Page() {
          
           <div className="relative">
             <Image
-              src="/sss.png"
+              src="/pp.JPG"
               alt="builder Image"
               width={600}
               height={600}

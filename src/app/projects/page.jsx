@@ -2,6 +2,8 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+
+import { FaWhatsapp } from "react-icons/fa";
 import {
   Card,
   CardContent,
@@ -28,33 +30,48 @@ const projects = [
     githubUrl: "https://github.com/Sarim503/portfolio",
     featured: false,
   },
-{
-  id: 2,
-  title: "Simple Todo App ",
-  description:
-    "A simple and clean todo list application with add, edit, and delete functionality, built using Next.js and Tailwind CSS.",
-  image: "/todo.png",
-  tags: ["Next.js", "Tailwind CSS", "React Toastify"],
-  category: "Frontend",
-  liveUrl: "https://simple-todo-app-nine-omega.vercel.app",
-  githubUrl: "https://github.com/Sarim503/SimpleTodoApp",
-  featured: false
-},
-{
-  id: 3,
-  title: "Tealpot Landing Page",
-  description:
-    "A responsive and visually appealing landing page built using Next.js, Tailwind CSS, and a modern carousel component.",
-  image: "/tealpot.png",
-  tags: ["Next.js", "Tailwind CSS", "Carousel"],
-  category: "Frontend",
-  liveUrl: "https://teal-pot.vercel.app",
-  githubUrl: "https://github.com/Sarim503/TealPot",
-  featured: false
-}
-
-
-
+  {
+    id: 2,
+    title: "Simple Todo App ",
+    description:
+      "A simple and clean todo list application with add, edit, and delete functionality, built using Next.js and Tailwind CSS.",
+    image: "/todo.png",
+    tags: ["Next.js", "Tailwind CSS", "React Toastify"],
+    category: "Frontend",
+    liveUrl: "https://simple-todo-app-nine-omega.vercel.app",
+    githubUrl: "https://github.com/Sarim503/SimpleTodoApp",
+    featured: false,
+  },
+  {
+    id: 3,
+    title: "Tealpot Landing Page",
+    description:
+      "A responsive and visually appealing landing page built using Next.js, Tailwind CSS, and a modern carousel component.",
+    image: "/tealpot.png",
+    tags: ["Next.js", "Tailwind CSS", "Carousel"],
+    category: "Frontend",
+    liveUrl: "https://teal-pot.vercel.app",
+    githubUrl: "https://github.com/Sarim503/TealPot",
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "Restaurant Website",
+    description:
+      "A responsive and visually appealing landing page built using Next.js, Tailwind CSS, and a modern carousel component. Features include user login functionality, add to cart, and order management integrated with Google Sheets.",
+    image: "/returant.png",
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Carousel",
+      "Firebase",
+      "Google Sheets Integration",
+    ],
+    category: "Frontend",
+    liveUrl: "https://the-antcient-sip.vercel.app",
+    githubUrl: "https://github.com/Sarim503/TheAntcientSip",
+    featured: false,
+  },
 ];
 
 const categories = ["All", "Frontend", "Mobile"];
@@ -77,9 +94,7 @@ export default function Component() {
     return matchesSearch && matchesCategory;
   });
 
-  const featuredProjects = filteredProjects.filter(
-    (project) => project.featured
-  );
+
   const otherProjects = filteredProjects.filter((project) => !project.featured);
 
   return (
@@ -135,79 +150,12 @@ export default function Component() {
       </section>
 
       <div className="container mx-auto px-4 py-12">
-        {/* Featured Projects */}
-        {featuredProjects.length > 0 && (
-          <section className="mb-16">
-            <h2 className="mb-8 text-3xl font-bold">Featured Projects</h2>
-            <div className="grid gap-8 md:grid-cols-2">
-              {featuredProjects.map((project) => (
-                <Card key={project.id} className="overflow-hidden">
-                  <div className="aspect-video relative overflow-hidden">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform hover:scale-105"
-                    />
-                  </div>
-                  <CardHeader>
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <CardTitle className="text-xl">
-                          {project.title}
-                        </CardTitle>
-                        <CardDescription className="mt-2">
-                          {project.description}
-                        </CardDescription>
-                      </div>
-                      <Badge variant="secondary">{project.category}</Badge>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div className="flex gap-2">
-                      {project.liveUrl && (
-                        <Button asChild size="sm">
-                          <Link
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <ExternalLink className="mr-2 h-4 w-4" />
-                            Live Demo
-                          </Link>
-                        </Button>
-                      )}
-                      <Button asChild variant="outline" size="sm">
-                        <Link
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="mr-2 h-4 w-4" />
-                          Code
-                        </Link>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
-        )}
+    
 
         {/* Other Projects */}
         {otherProjects.length > 0 && (
           <section>
-            <h2 className="mb-8 text-3xl font-bold">
-              {featuredProjects.length > 0 ? "Other Projects" : "All Projects"}
-            </h2>
+       
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {otherProjects.map((project) => (
                 <Card key={project.id} className="overflow-hidden">
@@ -226,9 +174,17 @@ export default function Component() {
                         {project.category}
                       </Badge>
                     </div>
-                    <CardDescription className="text-sm line-clamp-2">
-                      {project.description}
-                    </CardDescription>
+                    <div className="relative group">
+                      <CardDescription className="text-sm line-clamp-2">
+                        {project.description}
+                      </CardDescription>
+
+                      {project.description?.length > 200 && (
+                        <div className="absolute left-0 top-full mt-1 w-max max-w-xs rounded bg-gray-800 p-2 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                          {project.description}
+                        </div>
+                      )}
+                    </div>
                   </CardHeader>
                   <CardContent className="pt-0">
                     <div className="flex flex-wrap gap-1 mb-4">
@@ -309,9 +265,18 @@ export default function Component() {
             projects. Let's connect and see how we can collaborate.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button asChild size="lg">
-              <Link href="/contact">Get In Touch</Link>
-            </Button>
+           
+           <Link
+              href="https://wa.me/923355080503?text=Hi%20there!%20I%20saw%20your%20portfolio."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="w-full flex items-center gap-2 bg-green-700 hover:bg-green-900">
+                <FaWhatsapp size={16}  />
+                Send Message
+              </Button>
+            </Link>
+           
             <Button asChild variant="outline" size="lg">
               <Link href="/resume">View Resume</Link>
             </Button>

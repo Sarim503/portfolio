@@ -11,79 +11,70 @@ export default function AboutPage() {
     "Next.js",
     "HTML/CSS",
     "Tailwind CSS",
-    "Fire Base",
+    "Firebase",
     "Git",
-    "Electron js",
+    "Electron.js",
   ];
 
   const experiences = [
-  
     {
       title: "Junior Developer",
-      company: "silversparrowstudios",
-      period: "2025 jan - current",
-     description:
-  "Worked on building production-ready frontend websites and a full-featured admin panel. Developed a cross-platform desktop app using Electron. Gained hands-on experience with modern web technologies, agile development, and MVP delivery."
-
+      company: "Silversparrow Studios",
+      period: "Jan 2025 - Present",
+      description:
+        "Built production-ready frontend websites and full-featured admin panels. Developed a cross-platform desktop app using Electron. Worked in agile sprints and delivered MVPs quickly.",
     },
-{
-  title: "Internship",
-  company: "Nextpak Agile",
-  period: "2024 july - 2024 Dev",
-  description:
-    "Contributed to MVP development and learned modern web technologies in an agile environment.",
-}
-
+    {
+      title: "Frontend Intern",
+      company: "Nextpak Agile",
+      period: "Jul 2024 - Dec 2024",
+      description:
+        "Contributed to MVP development while gaining hands-on experience with React, Tailwind CSS, and Git workflows in a fast-paced agile environment.",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="container mx-auto px-4 py-12">
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-semibold mb-4">My Story</h3>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                I started my journey in web development during college, where I
-                discovered my passion for creating digital solutions. What began
-                as curiosity about how websites work has evolved into a career
-                dedicated to crafting exceptional user experiences.
-              </p>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                Over the years, I've had the privilege of working with startups,
-                agencies, and established companies, helping them bring their
-                digital visions to life. I believe in writing clean,
-                maintainable code and staying up-to-date with the latest
-                technologies and best practices.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies,
-                contributing to open-source projects, or enjoying outdoor
-                activities like hiking and photography.
-              </p>
+<div className="min-h-screen bg-gradient-to-b from-[#f8fafc] to-[#e2e8f0]">
+
+      <main className="container mx-auto px-4 py-16 space-y-24">
+        {/* About Section */}
+        <section className="text-center space-y-6">
+          <h2 className="text-4xl font-bold">About Me</h2>
+          <div className="grid md:grid-cols-2 gap-10 text-left">
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <h3 className="text-xl font-semibold text-foreground">My Story</h3>
+  <p>
+  My journey into web development began during university, where I developed a student enrollment advisor project using front-end technologies along with a SQL database. That project helped me understand how design and data come together to solve real-world problems.
+</p>
+<p>
+  Since then, I’ve continued building my skills through personal projects and continuous practice, focusing on creating user-friendly and visually appealing web interfaces. I enjoy writing clean, scalable code and exploring new tools and best practices to improve my workflow.
+</p>
+
+<p>
+  Outside of coding, I enjoy exploring new technologies, reading self-building books, and spending time outdoors to refresh my mind and gather new ideas.
+</p>
+
+
+
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">What I Do</h3>
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-foreground">What I Do</h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                <div className="flex gap-4 items-start">
+                  <div className="w-2 h-2 mt-2 bg-primary rounded-full"></div>
                   <div>
                     <h4 className="font-medium">Frontend Development</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Creating responsive, interactive user interfaces with
-                      React, Next.js, and modern CSS
+                    <p className="text-muted-foreground text-sm">
+                      Building fast, responsive UIs using React, Next.js & Tailwind.
                     </p>
                   </div>
                 </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                <div className="flex gap-4 items-start">
+                  <div className="w-2 h-2 mt-2 bg-primary rounded-full"></div>
                   <div>
                     <h4 className="font-medium">UI/UX Design</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Designing user-centered interfaces with attention to
-                      usability and aesthetics
+                    <p className="text-muted-foreground text-sm">
+                      Designing user-first interfaces with aesthetic and functional design.
                     </p>
                   </div>
                 </div>
@@ -91,20 +82,15 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-        {/* Skills Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Skills & Technologies
-          </h2>
-          <Card>
-            <CardContent className="p-8">
-              <div className="flex flex-wrap gap-3 justify-center">
+
+        {/* Skills */}
+        <section className="text-center space-y-6">
+          <h2 className="text-4xl font-bold">Skills & Technologies</h2>
+          <Card className="shadow-md border border-muted">
+            <CardContent className="p-6">
+              <div className="flex flex-wrap justify-center gap-3">
                 {skills.map((skill, index) => (
-                  <Badge
-                    key={index}
-                    variant="secondary"
-                    className="text-sm py-2 px-4"
-                  >
+                  <Badge key={index} className="text-sm px-4 py-2 shadow-sm">
                     {skill}
                   </Badge>
                 ))}
@@ -112,69 +98,65 @@ export default function AboutPage() {
             </CardContent>
           </Card>
         </section>
-        {/* Experience Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
-          <div className="space-y-6">
+
+        {/* Experience */}
+        <section className="text-center space-y-6">
+          <h2 className="text-4xl font-bold">Experience</h2>
+          <div className="space-y-6 max-w-3xl mx-auto">
             {experiences.map((exp, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <Card key={index} className="text-left shadow-md border border-muted">
+                <CardContent className="p-6 space-y-2">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div>
                       <h3 className="text-xl font-semibold">{exp.title}</h3>
                       <p className="text-primary font-medium">{exp.company}</p>
                     </div>
-                    <Badge variant="outline" className="w-fit mt-2 md:mt-0">
+                    <Badge variant="outline" className="mt-2 md:mt-0">
                       {exp.period}
                     </Badge>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {exp.description}
-                  </p>
+                  <p className="text-muted-foreground">{exp.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
         </section>
-        {/* Contact Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Let's Connect</h2>
-          <Card>
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    I'm always interested in new opportunities and exciting
-                    projects. Whether you have a question or just want to say
-                    hi, feel free to reach out!
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <Mail className="h-5 w-5 text-primary" />
-                      <span>sarim.khan50503@email.com</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Phone className="h-5 w-5 text-primary" />
-                      <span>+923355080503</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <MapPin className="h-5 w-5 text-primary" />
-                      <span>Bahria Town,islambad</span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Connect with me on social media and check out my latest
-                    work.
-                  </p>
-                </div>
+
+        {/* Contact */}
+   <section className="text-center space-y-6">
+  <h2 className="text-4xl font-bold">Let's Connect</h2>
+  <div className="flex justify-center ">
+    <Card className="shadow-md border border-muted w-full max-w-4xl">
+      <CardContent className="p-8">
+        <div className="grid md:grid-cols-2 gap-8 text-left">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-foreground">
+              Get In Touch
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Interested in collaborating or have a project in mind? Feel free to reach out!
+            </p>
+            <div className="space-y-3 text-center ">
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-primary" />
+                <span>sarim.khan50503@email.com</span>
               </div>
-            </CardContent>
-          </Card>
-        </section>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-primary" />
+                <span>+92 335 5080503</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span>Bahria Town, Islamabad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  </div>
+</section>
+
       </main>
     </div>
   );
