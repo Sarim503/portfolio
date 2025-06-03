@@ -21,7 +21,7 @@ const projects = [
     title: "Portfolio Website",
     description:
       "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
-    image: "/ssa.webp",
+    image: "/portfolio.png",
     tags: ["Next.js", "Tailwind CSS", "shadcn/ui"],
     category: "Frontend",
     liveUrl: "https://example.com",
