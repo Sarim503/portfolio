@@ -28,18 +28,32 @@ const projects = [
     githubUrl: "https://github.com/Sarim503/portfolio",
     featured: false,
   },
-  {
-    id: 2,
-    title: "Landing Page",
-    description:
-      "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
-    image: "/ssa.webp",
-    tags: ["Next.js", "Tailwind CSS", ],
-    category: "Frontend",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/Sarim503/portfolio",
-    featured: false,
-  },
+{
+  id: 2,
+  title: "Simple Todo App ",
+  description:
+    "A simple and clean todo list application with add, edit, and delete functionality, built using Next.js and Tailwind CSS.",
+  image: "/todo.png",
+  tags: ["Next.js", "Tailwind CSS", "React Toastify"],
+  category: "Frontend",
+  liveUrl: "https://simple-todo-app-nine-omega.vercel.app",
+  githubUrl: "https://github.com/Sarim503/SimpleTodoApp",
+  featured: false
+},
+{
+  id: 3,
+  title: "Tealpot Landing Page",
+  description:
+    "A responsive and visually appealing landing page built using Next.js, Tailwind CSS, and a modern carousel component.",
+  image: "/tealpot.png",
+  tags: ["Next.js", "Tailwind CSS", "Carousel"],
+  category: "Frontend",
+  liveUrl: "https://teal-pot.vercel.app",
+  githubUrl: "https://github.com/Sarim503/TealPot",
+  featured: false
+}
+
+
 
 ];
 
