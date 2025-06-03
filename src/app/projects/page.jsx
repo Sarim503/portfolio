@@ -25,7 +25,19 @@ const projects = [
     tags: ["Next.js", "Tailwind CSS", "shadcn/ui"],
     category: "Frontend",
     liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/portfolio",
+    githubUrl: "https://github.com/Sarim503/portfolio",
+    featured: false,
+  },
+  {
+    id: 2,
+    title: "Landing Page",
+    description:
+      "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
+    image: "/ssa.webp",
+    tags: ["Next.js", "Tailwind CSS", ],
+    category: "Frontend",
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/Sarim503/portfolio",
     featured: false,
   },
 

@@ -9,36 +9,7 @@ import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function ResumePage() {
-  const projects = [
-    {
-      title: "E-commerce Platform",
-      description:
-        "A full-stack e-commerce solution with payment processing, inventory management, and analytics.",
-      techStack: ["React", "Node.js", "MongoDB", "Stripe"],
-      link: "#",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "A collaborative task management application with real-time updates and team collaboration features.",
-      techStack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
-      link: "#",
-    },
-    {
-      title: "Health Tracking Dashboard",
-      description:
-        "A data visualization dashboard for health metrics with customizable charts and reports.",
-      techStack: ["React", "D3.js", "Express", "PostgreSQL"],
-      link: "#",
-    },
-    {
-      title: "AI Content Generator",
-      description:
-        "A tool that leverages AI to generate marketing content, blog posts, and social media updates.",
-      techStack: ["Python", "Flask", "OpenAI API", "Vue.js"],
-      link: "#",
-    },
-  ];
+
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
@@ -179,7 +150,7 @@ export default function ResumePage() {
             <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-1 mb-2">
               <h3 className="text-xl font-semibold">Intern</h3>
               <div className="text-sm text-muted-foreground">
-                <span className="font-medium">Nextpak </span> | Jan 2024 - Dec
+                <span className="font-medium">Nextpak,Rawalpindi </span> | Jun 2024 - Dec
                 2024
               </div>
             </div>
@@ -299,43 +270,7 @@ export default function ResumePage() {
         </div>
       </section>
 
-      {/* Projects */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold border-b pb-2 mb-6">
-          Featured Projects
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
-            <Card key={index}>
-              <CardContent className="pt-6">
-                <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.techStack.map((tech, techIndex) => (
-                    <Badge
-                      key={techIndex}
-                      variant="secondary"
-                      className="px-2 py-0.5 text-xs"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-                <Link
-                  href={project.link}
-                  className="text-sm text-primary hover:underline"
-                >
-                  View Project →
-                </Link>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
+  
       {/* Contact */}
       <section>
         <h2 className="text-2xl font-bold border-b pb-2 mb-6">Contact Me</h2>
@@ -358,7 +293,7 @@ export default function ResumePage() {
               <MapPin className="h-5 w-5 text-muted-foreground" />
               <span>Bahria Town,Islamabd</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex  items-center gap-3 ">
               <Link
                 href="https://github.com/Sarim503"
                 target="_blank"
@@ -368,11 +303,14 @@ export default function ResumePage() {
                 <Github className="h-3.5 w-3.5" />
                 <span>github.com/Sarim503</span>
               </Link>
+            
+            </div>
+            <div className="flex  items-center gap-3 ">
               <Link href="#" className="hover:text-primary">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-            </div>
+              </div>
           </div>
 
           <div>
