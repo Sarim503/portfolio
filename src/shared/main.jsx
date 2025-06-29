@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image"
 import Link from "next/link"
 
@@ -10,8 +12,8 @@ export default function Page() {
           <div className="flex flex-col space-y-6">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-             Crafting Exceptional
-                <span className="block text-blue-600">Digital Experience</span>
+             Code That Performs,
+                <span className="block text-blue-600">Design That Inspires</span>
               </h1>
               <p className="text-lg text-gray-600 md:text-xl">
                 I design and develop fast, modern, and responsive web applications that help businesses grow in the digital world.
@@ -31,17 +33,51 @@ export default function Page() {
           </div>
 
          
-          <div className="relative">
+          {/* <div className="relative ">
             <Image
-              src="/pp.JPG"
+              src="/sarim.jpg"
               alt="builder Image"
               width={600}
               height={600}
-              className="rounded-2xl shadow-2xl object-cover"
+              className="rounded-2xl shadow-2xl object-cover "
               priority
             />
         
-          </div>
+          </div> */}
+       <div
+  className="relative group w-fit"
+  onMouseLeave={(e) => {
+    // Force reflow to reset animation
+    const el = e.currentTarget.querySelector(".animate-tracer");
+    if (el) {
+      el.classList.remove("animate-tracer");
+      void el.offsetWidth; // force reflow
+      el.classList.add("animate-tracer");
+    }
+  }}
+>
+  {/* Border layer */}
+  <span className="pointer-events-none absolute inset-0 rounded-2xl border border-transparent group-hover:border-b-gray-950 group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
+    {/* Moving dot */}
+    <span className="absolute h-2 w-2 bg-gradient-to-b from-blue-200 via-blue-400 to-blue-500rounded-full animate-tracer" />
+  </span>
+
+  {/* Image */}
+   <Image
+        src="/sarim.jpg"
+        alt="builder Image"
+        width={600}
+        height={600}
+        className="rounded-2xl shadow-2xl object-cover transition-transform duration-700 group-hover:scale-x-[-1]"
+
+
+        priority
+      />
+</div>
+
+
+
+
         </div>
       </div>
     </div>
