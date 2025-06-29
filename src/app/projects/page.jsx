@@ -26,7 +26,7 @@ const projects = [
     image: "/portfolio.png",
     tags: ["Next.js", "Tailwind CSS", "shadcn/ui"],
     category: "Frontend",
-    liveUrl: "https://example.com",
+ liveUrl: "https://portfolio-gamma-ten-63.vercel.app",
     githubUrl: "https://github.com/Sarim503/portfolio",
     featured: false,
   },
