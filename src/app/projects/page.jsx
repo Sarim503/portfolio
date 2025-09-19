@@ -72,6 +72,23 @@ const projects = [
     githubUrl: "https://github.com/Sarim503/TheAntcientSip",
     featured: false,
   },
+  {
+    id: 5,
+    title: "sparrowquill",
+    description:
+      "A fast and engaging social app where users can share posts, follow friends, and join conversations in real time. Designed for smooth performance and an easy-to-use interface, it helps people stay connected, discover trends, and express themselves anytime, anywhere",
+    image: "/sparrowquill.png",
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Carousel",
+      "JWT (JSON Web Token)",
+    ],
+    category: "Frontend",
+    liveUrl: "https://sparrowquill.com/",
+githubUrl: "/privateproject",
+    featured: false,
+  },
 ];
 
 const categories = ["All", "Frontend", "Mobile"];
