@@ -89,6 +89,44 @@ const projects = [
 githubUrl: "/privateproject",
     featured: false,
   },
+  {
+    id: 6,
+    title: "frameyourfortune",
+    description:
+      "A modern and intuitive online video editor that allows users to create, edit, and customize videos with ease. Featuring powerful tools, real-time preview, and a smooth interface, it’s designed to help creators produce professional-quality content quickly and effortlessly.",
+    image: "/framermotion.png",
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Carousel",
+      "JWT (JSON Web Token)",
+      "firebase",
+      "framer Motion"
+    ],
+    category: "Frontend",
+    liveUrl: "https://www.frameyourfortune.com/",
+githubUrl: "/privateproject",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "silversparrowstudios",
+    description:
+     "A forward-thinking company dedicated to building innovative digital solutions. We focus on creating user-friendly, high-performance products that empower individuals and businesses to connect, create, and grow in the digital age.",
+    image: "/company.png",
+     tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Carousel",
+      "JWT (JSON Web Token)",
+      "firebase",
+      "framer Motion"
+    ],
+    category: "Frontend",
+    liveUrl: "https://silversparrowstudios.com/",
+githubUrl: "/privateproject",
+    featured: false,
+  },
 ];
 
 const categories = ["All", "Frontend", "Mobile"];
