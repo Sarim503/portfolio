@@ -18,7 +18,7 @@ export default function PrivateProject() {
           Source code is not publicly available to respect client privacy.
         </p>
         <Link
-          href="/"
+          href="/projects"
           className="inline-block px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
         >
           Back to Projects

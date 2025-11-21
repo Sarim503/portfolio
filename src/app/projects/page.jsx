@@ -26,7 +26,7 @@ const projects = [
     image: "/portfolio.png",
     tags: ["Next.js", "Tailwind CSS", "shadcn/ui"],
     category: "Frontend",
- liveUrl: "https://portfolio-gamma-ten-63.vercel.app",
+    liveUrl: "https://portfolio-gamma-ten-63.vercel.app",
     githubUrl: "https://github.com/Sarim503/portfolio",
     featured: false,
   },
@@ -78,15 +78,10 @@ const projects = [
     description:
       "A fast and engaging social app where users can share posts, follow friends, and join conversations in real time. Designed for smooth performance and an easy-to-use interface, it helps people stay connected, discover trends, and express themselves anytime, anywhere",
     image: "/sparrowquill.png",
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Carousel",
-      "JWT (JSON Web Token)",
-    ],
+    tags: ["Next.js", "Tailwind CSS", "Carousel", "JWT (JSON Web Token)"],
     category: "Frontend",
     liveUrl: "https://sparrowquill.com/",
-githubUrl: "/privateproject",
+    githubUrl: "/privateproject",
     featured: false,
   },
   {
@@ -101,30 +96,61 @@ githubUrl: "/privateproject",
       "Carousel",
       "JWT (JSON Web Token)",
       "firebase",
-      "framer Motion"
+      "framer Motion",
     ],
     category: "Frontend",
     liveUrl: "https://www.frameyourfortune.com/",
-githubUrl: "/privateproject",
+    githubUrl: "/privateproject",
     featured: false,
   },
   {
     id: 7,
     title: "silversparrowstudios",
     description:
-     "A forward-thinking company dedicated to building innovative digital solutions. We focus on creating user-friendly, high-performance products that empower individuals and businesses to connect, create, and grow in the digital age.",
+      "A forward-thinking company dedicated to building innovative digital solutions. We focus on creating user-friendly, high-performance products that empower individuals and businesses to connect, create, and grow in the digital age.",
     image: "/company.png",
-     tags: [
+    tags: [
       "Next.js",
       "Tailwind CSS",
       "Carousel",
       "JWT (JSON Web Token)",
       "firebase",
-      "framer Motion"
+      "framer Motion",
     ],
     category: "Frontend",
     liveUrl: "https://silversparrowstudios.com/",
-githubUrl: "/privateproject",
+    githubUrl: "/privateproject",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "theclarity",
+    description:
+      "A platform dedicated to sharing Islamic knowledge, guidance, and inspiration. We aim to provide authentic content on faith, lifestyle, and spirituality, helping readers strengthen their connection with Islam and foster a mindful, purposeful life.",
+    image: "/clearity.png",
+    tags: ["Next.js", "Tailwind CSS", "Carousel", "framer Motion"],
+    category: "Frontend",
+    liveUrl: "https://www.theclarity.net/",
+    githubUrl: "/privateproject",
+    featured: false,
+  },
+  {
+    id: 9,
+    title: "Skilllob",
+    description:
+      "SkillLob is a dynamic platform connecting users and service providers. Users can easily discover and book a wide range of services, while providers can showcase their skills and offer services to a growing audience. Our mission is to make service discovery, booking, and delivery seamless, empowering both users and providers to collaborate and grow efficiently",
+    image: "/skillob.png",
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Carousel",
+      "JWT (JSON Web Token)",
+
+      "framer Motion",
+    ],
+    category: "Frontend",
+    liveUrl: "https://www.skills-project.silversparrowstudios.com/signup",
+    githubUrl: "/privateproject",
     featured: false,
   },
 ];
@@ -148,7 +174,6 @@ export default function Component() {
 
     return matchesSearch && matchesCategory;
   });
-
 
   const otherProjects = filteredProjects.filter((project) => !project.featured);
 
@@ -205,12 +230,9 @@ export default function Component() {
       </section>
 
       <div className="container mx-auto px-4 py-12">
-    
-
         {/* Other Projects */}
         {otherProjects.length > 0 && (
           <section>
-       
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {otherProjects.map((project) => (
                 <Card key={project.id} className="overflow-hidden">
@@ -320,18 +342,17 @@ export default function Component() {
             projects. Let's connect and see how we can collaborate.
           </p>
           <div className="flex gap-4 justify-center">
-           
-           <Link
+            <Link
               href="https://wa.me/923355080503?text=Hi%20there!%20I%20saw%20your%20portfolio."
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button className="w-full flex items-center gap-2 bg-green-700 hover:bg-green-900">
-                <FaWhatsapp size={16}  />
+                <FaWhatsapp size={16} />
                 Send Message
               </Button>
             </Link>
-           
+
             <Button asChild variant="outline" size="lg">
               <Link href="/resume">View Resume</Link>
             </Button>

@@ -9,8 +9,6 @@ import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function ResumePage() {
-
-
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
       <div className="flex flex-col md:flex-row gap-6 items-center md:items-start mb-8">
@@ -66,16 +64,23 @@ export default function ResumePage() {
             </Badge>
             <Badge
               variant="outline"
-              className="px-3 py-1 text-sm flex items-center gap-1"
+              className="px-3 py-1 text-sm flex items-center gap-2"
+              asChild
             >
-              <Linkedin className="h-3.5 w-3.5" />
-              <span>linkedin.com/in/johndoe</span>
+              <a
+                href="https://www.linkedin.com/in/sarimkhan-webdev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="h-3.5 w-3.5" />
+                <span>sarimkhan-webdev</span>
+              </a>
             </Badge>
           </div>
           <div className="flex justify-center md:justify-start">
             <Button className="flex items-center gap-2">
               <a
-                href="/resume.pdf"
+                href="/Sarim Khan CV.pdf"
                 download
                 className="flex items-center gap-2 btn-class"
               >
@@ -150,8 +155,8 @@ export default function ResumePage() {
             <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-1 mb-2">
               <h3 className="text-xl font-semibold">Intern</h3>
               <div className="text-sm text-muted-foreground">
-                <span className="font-medium">Nextpak,Rawalpindi </span> | Jun 2024 - Dec
-                2024
+                <span className="font-medium">Nextpak,Rawalpindi </span> | Jun
+                2024 - Dec 2024
               </div>
             </div>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
@@ -206,6 +211,15 @@ export default function ResumePage() {
                     <span className="text-sm text-muted-foreground">95%</span>
                   </div>
                   <Progress value={95} className="h-2" />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-sm font-medium">
+                      Expo (Mobile Development)
+                    </span>
+                    <span className="text-sm text-muted-foreground">70%</span>
+                  </div>
+                  <Progress value={70} className="h-2" />
                 </div>
                 <div>
                   <div className="flex justify-between mb-1">
@@ -270,7 +284,6 @@ export default function ResumePage() {
         </div>
       </section>
 
-  
       {/* Contact */}
       <section>
         <h2 className="text-2xl font-bold border-b pb-2 mb-6">Contact Me</h2>
@@ -293,24 +306,29 @@ export default function ResumePage() {
               <MapPin className="h-5 w-5 text-muted-foreground" />
               <span>Bahria Town,Islamabd</span>
             </div>
-            <div className="flex  items-center gap-3 ">
+            <div className="flex items-center gap-2">
               <Link
                 href="https://github.com/Sarim503"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary"
+                className="flex items-center gap-2 hover:text-primary"
               >
                 <Github className="h-3.5 w-3.5" />
                 <span>github.com/Sarim503</span>
               </Link>
-            
             </div>
-            <div className="flex  items-center gap-3 ">
-              <Link href="#" className="hover:text-primary">
-                <Linkedin className="h-6 w-6" />
-                <span className="sr-only">LinkedIn</span>
+
+            <div className="flex items-center gap-2">
+              <Link
+                href="https://www.linkedin.com/in/sarimkhan-webdev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-primary"
+              >
+                <Linkedin className="h-3.5 w-3.5" />
+                <span>sarimkhan-webdev</span>
               </Link>
-              </div>
+            </div>
           </div>
 
           <div>
