@@ -2,10 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Page() {
   return (
-    <div className="max-h-screen bg-white">
+    <div
+      className="min-h-screen bg-blue-50
+"
+    >
       <div className="container mx-auto px-4 py-12 md:py-24">
         <div className="grid items-center gap-8 md:grid-cols-2 lg:gap-16">
           {/* Left side - Text and Button */}
@@ -32,37 +36,27 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Right side - Image */}
-          <div
-            className="relative group w-full max-w-md mx-auto md:max-w-lg lg:max-w-xl"
-            onMouseLeave={(e) => {
-              const el = e.currentTarget.querySelector(".animate-tracer");
-              if (el) {
-                el.classList.remove("animate-tracer");
-                void el.offsetWidth;
-                el.classList.add("animate-tracer");
-              }
-            }}
+          {/* Right side - Image with Framer Motion */}
+          <motion.div
+            className="relative w-full max-w-md mx-auto md:max-w-md "
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            whileHover={{ scale: 1.05, rotate: 2 }}
           >
-            {/* Border layer */}
-            <span className="pointer-events-none absolute inset-0 rounded-2xl border border-transparent group-hover:border-b-gray-950 group-hover:opacity-100 opacity-0 transition-all duration-300 z-10">
-              <span className="absolute h-2 w-2 bg-gradient-to-b from-blue-200 via-blue-400 to-blue-500 rounded-full animate-tracer" />
-            </span>
-
-            {/* Image */}
             <Image
               src="/sarim.jpg"
               alt="builder Image"
               width={600}
               height={600}
-              className="rounded-2xl shadow-2xl object-cover w-full h-auto transition-transform duration-700 group-hover:scale-x-[-1] max-w-sm md:max-w-md lg:max-w-md xl:max-w-md"
+              className="rounded-2xl shadow-2xl object-cover w-full h-auto"
               sizes="(max-width: 768px) 80vw,
-         (max-width: 1024px) 60vw,
-         (max-width: 1280px) 50vw,
-         600px"
+                     (max-width: 1024px) 60vw,
+                     (max-width: 1280px) 50vw,
+                     600px"
               priority
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

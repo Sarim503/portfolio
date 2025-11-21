@@ -1,8 +1,10 @@
+
+
+
 "use client";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-
 import { FaWhatsapp } from "react-icons/fa";
 import {
   Card,
@@ -16,6 +18,9 @@ import { ExternalLink, Github, Search, Filter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+
 
 const projects = [
   {
@@ -154,10 +159,9 @@ const projects = [
     featured: false,
   },
 ];
-
 const categories = ["All", "Frontend", "Mobile"];
 
-export default function Component() {
+export default function ProjectsPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -180,7 +184,13 @@ export default function Component() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <section className="border-b bg-muted/30">
+      <motion.section
+        className="border-b bg-muted/30"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             My Projects
@@ -190,10 +200,16 @@ export default function Component() {
             solutions I've built
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Filters */}
-      <section className="border-b">
+      <motion.section
+        className="border-b"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             {/* Search */}
@@ -227,86 +243,101 @@ export default function Component() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
+      {/* Projects Grid */}
       <div className="container mx-auto px-4 py-12">
-        {/* Other Projects */}
         {otherProjects.length > 0 && (
           <section>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {otherProjects.map((project) => (
-                <Card key={project.id} className="overflow-hidden">
-                  <div className="aspect-video relative overflow-hidden">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform hover:scale-105"
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-start justify-between">
-                      <CardTitle className="text-lg">{project.title}</CardTitle>
-                      <Badge variant="secondary" className="text-xs">
-                        {project.category}
-                      </Badge>
+              {otherProjects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="overflow-hidden">
+                    <div className="aspect-video relative overflow-hidden">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform hover:scale-105"
+                      />
                     </div>
-                    <div className="relative group">
-                      <CardDescription className="text-sm line-clamp-2">
-                        {project.description}
-                      </CardDescription>
-
-                      {project.description?.length > 200 && (
-                        <div className="absolute left-0 top-full mt-1 w-max max-w-xs rounded bg-gray-800 p-2 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                    <CardHeader className="pb-3">
+                      <div className="flex items-start justify-between">
+                        <CardTitle className="text-lg">{project.title}</CardTitle>
+                        <Badge variant="secondary" className="text-xs">
+                          {project.category}
+                        </Badge>
+                      </div>
+                      <div className="relative group">
+                        <CardDescription className="text-sm line-clamp-2">
                           {project.description}
-                        </div>
-                      )}
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {project.tags.slice(0, 3).map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                      {project.tags.length > 3 && (
-                        <Badge variant="outline" className="text-xs">
-                          +{project.tags.length - 3}
-                        </Badge>
-                      )}
-                    </div>
-                    <div className="flex gap-2">
-                      {project.liveUrl && (
-                        <Button asChild size="sm" className="flex-1">
+                        </CardDescription>
+                        {project.description?.length > 200 && (
+                          <div className="absolute left-0 top-full mt-1 w-max max-w-xs rounded bg-gray-800 p-2 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                            {project.description}
+                          </div>
+                        )}
+                      </div>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="flex flex-wrap gap-1 mb-4">
+                        {project.tags.slice(0, 3).map((tag) => (
+                          <motion.div
+                            key={tag}
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ amount: 0.3 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <Badge variant="outline" className="text-xs">
+                              {tag}
+                            </Badge>
+                          </motion.div>
+                        ))}
+                        {project.tags.length > 3 && (
+                          <Badge variant="outline" className="text-xs">
+                            +{project.tags.length - 3}
+                          </Badge>
+                        )}
+                      </div>
+                      <div className="flex gap-2">
+                        {project.liveUrl && (
+                          <Button asChild size="sm" className="flex-1">
+                            <Link
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <ExternalLink className="mr-1 h-3 w-3" />
+                              Demo
+                            </Link>
+                          </Button>
+                        )}
+                        <Button
+                          asChild
+                          variant="outline"
+                          size="sm"
+                          className="flex-1"
+                        >
                           <Link
-                            href={project.liveUrl}
+                            href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <ExternalLink className="mr-1 h-3 w-3" />
-                            Demo
+                            <Github className="mr-1 h-3 w-3" />
+                            Code
                           </Link>
                         </Button>
-                      )}
-                      <Button
-                        asChild
-                        variant="outline"
-                        size="sm"
-                        className="flex-1"
-                      >
-                        <Link
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="mr-1 h-3 w-3" />
-                          Code
-                        </Link>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </section>
@@ -314,7 +345,13 @@ export default function Component() {
 
         {/* No Results */}
         {filteredProjects.length === 0 && (
-          <div className="text-center py-16">
+          <motion.div
+            className="text-center py-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
             <h3 className="text-2xl font-semibold mb-2">No projects found</h3>
             <p className="text-muted-foreground mb-4">
               Try adjusting your search terms or filters
@@ -327,12 +364,18 @@ export default function Component() {
             >
               Clear Filters
             </Button>
-          </div>
+          </motion.div>
         )}
       </div>
 
       {/* Call to Action */}
-      <section className="border-t bg-muted/30">
+      <motion.section
+        className="border-t bg-muted/30"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto px-4 py-16 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Interested in working together?
@@ -358,7 +401,7 @@ export default function Component() {
             </Button>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }
