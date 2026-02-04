@@ -72,7 +72,7 @@ export default function ResumePage() {
         viewport={{ amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="w-40 h-40 relative rounded-full overflow-hidden border-4 border-gray-100 shadow-lg">
+        <div className="w-40 h-40 relative rounded-full overflow-hidden border-4 border-border shadow-lg">
           <Image
             src="/sss.png"
             alt="Profile Photo"

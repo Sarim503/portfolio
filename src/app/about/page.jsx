@@ -39,7 +39,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f8fafc] to-[#e2e8f0]">
+    <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20">
       <main className="container mx-auto px-4 py-16 space-y-24">
         {/* About Section */}
         <motion.section
