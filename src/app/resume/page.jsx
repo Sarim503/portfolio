@@ -19,7 +19,7 @@ export default function ResumePage() {
     { name: "JavaScript / TypeScript", value: 90 },
     { name: "HTML / CSS / Tailwind CSS", value: 90 },
     { name: "Firebase (Auth, Firestore)", value: 85 },
-    { name: "Git / GitHub", value: 80 },
+    { name: "Git / GitHub", value: 70 },
   ];
 
   const professionalSkills = [
