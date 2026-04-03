@@ -45,7 +45,7 @@ export default function Page() {
             whileHover={{ scale: 1.05, rotate: 2 }}
           >
             <Image
-              src="/sarim.jpg"
+              src="/sarimboy.png"
               alt="builder Image"
               width={600}
               height={600}

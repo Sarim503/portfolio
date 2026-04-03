@@ -24,72 +24,18 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const projects = [
   {
     id: 1,
-    title: "Portfolio Website",
+    title: "game-warrior",
     description:
-      "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
-    image: "/portfolio.png",
-    tags: ["Next.js", "Tailwind CSS", "shadcn/ui"],
-    category: "Frontend",
-    liveUrl: "https://portfolio-gamma-ten-63.vercel.app",
-    githubUrl: "https://github.com/Sarim503/portfolio",
+      "A modern calling interface with an interactive dialing pad component for seamless communication. Features clean design, intuitive user experience, and real-time call simulation.",
+    image: "/ss3.png",
+    tags: ["Next.js", "Tailwind CSS", "Calling Interface", "Dialing Pad", "Interactive UI"],
+    category: "Landing Page",
+    liveUrl: "https://game-warrior-nu.vercel.app/",
+    githubUrl: "https://github.com/Sarim503/Game-warrior",
     featured: false,
   },
   {
     id: 2,
-    title: "Simple Todo App ",
-    description:
-      "A simple and clean todo list application with add, edit, and delete functionality, built using Next.js and Tailwind CSS.",
-    image: "/todo.png",
-    tags: ["Next.js", "Tailwind CSS", "React Toastify"],
-    category: "Frontend",
-    liveUrl: "https://simple-todo-app-nine-omega.vercel.app",
-    githubUrl: "https://github.com/Sarim503/SimpleTodoApp",
-    featured: false,
-  },
-  {
-    id: 3,
-    title: "Tealpot Landing Page",
-    description:
-      "A responsive and visually appealing landing page built using Next.js, Tailwind CSS, and a modern carousel component.",
-    image: "/tealpot.png",
-    tags: ["Next.js", "Tailwind CSS", "Carousel"],
-    category: "Frontend",
-    liveUrl: "https://teal-pot.vercel.app",
-    githubUrl: "https://github.com/Sarim503/TealPot",
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "Restaurant Website",
-    description:
-      "A responsive and visually appealing landing page built using Next.js, Tailwind CSS, and a modern carousel component. Features include user login functionality, add to cart, and order management integrated with Google Sheets.",
-    image: "/returant.png",
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Carousel",
-      "Firebase",
-      "Google Sheets Integration",
-    ],
-    category: "Frontend",
-    liveUrl: "https://the-antcient-sip.vercel.app",
-    githubUrl: "https://github.com/Sarim503/TheAntcientSip",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "sparrowquill",
-    description:
-      "A fast and engaging social app where users can share posts, follow friends, and join conversations in real time. Designed for smooth performance and an easy-to-use interface, it helps people stay connected, discover trends, and express themselves anytime, anywhere",
-    image: "/sparrowquill.png",
-    tags: ["Next.js", "Tailwind CSS", "Carousel", "JWT (JSON Web Token)"],
-    category: "Frontend",
-    liveUrl: "https://sparrowquill.com/",
-    githubUrl: "/privateproject",
-    featured: false,
-  },
-  {
-    id: 6,
     title: "frameyourfortune",
     description:
       "A modern and intuitive online video editor that allows users to create, edit, and customize videos with ease. Featuring powerful tools, real-time preview, and a smooth interface, it’s designed to help creators produce professional-quality content quickly and effortlessly.",
@@ -107,8 +53,107 @@ const projects = [
     githubUrl: "/privateproject",
     featured: false,
   },
+
+  {
+    id: 3,
+    title: "Portfolio Website",
+    description:
+      "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
+    image: "/portfolio.png",
+    tags: ["Next.js", "Tailwind CSS", "shadcn/ui"],
+    category: "Frontend",
+    liveUrl: "https://portfolio-gamma-ten-63.vercel.app",
+    githubUrl: "https://github.com/Sarim503/portfolio",
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "Simple Todo App ",
+    description:
+      "A simple and clean todo list application with add, edit, and delete functionality, built using Next.js and Tailwind CSS.",
+    image: "/todo.png",
+    tags: ["Next.js", "Tailwind CSS", "React Toastify"],
+    category: "Frontend",
+    liveUrl: "https://simple-todo-app-nine-omega.vercel.app",
+    githubUrl: "https://github.com/Sarim503/SimpleTodoApp",
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "theclarity",
+    description:
+      "A platform dedicated to sharing Islamic knowledge, guidance, and inspiration. We aim to provide authentic content on faith, lifestyle, and spirituality, helping readers strengthen their connection with Islam and foster a mindful, purposeful life.",
+    image: "/clearity.png",
+    tags: ["Next.js", "Tailwind CSS", "Carousel", "framer Motion"],
+    category: "Frontend",
+    liveUrl: "https://www.theclarity.net/",
+    githubUrl: "/privateproject",
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Tealpot Landing Page",
+    description:
+      "A responsive and visually appealing landing page built using Next.js, Tailwind CSS, and a modern carousel component.",
+    image: "/tealpot.png",
+    tags: ["Next.js", "Tailwind CSS", "Carousel"],
+    category: "Frontend",
+    liveUrl: "https://teal-pot.vercel.app",
+    githubUrl: "https://github.com/Sarim503/TealPot",
+    featured: false,
+  },
   {
     id: 7,
+    title: "RoziConnect",
+    description:
+      "SkillLob is a dynamic platform connecting users and service providers. Users can easily discover and book a wide range of services, while providers can showcase their skills and offer services to a growing audience. Our mission is to make service discovery, booking, and delivery seamless, empowering both users and providers to collaborate and grow efficiently",
+    image: "/skillob.png",
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Carousel",
+      "JWT (JSON Web Token)",
+
+      "framer Motion",
+    ],
+    category: "Frontend",
+    liveUrl: "https://www.skills-project.silversparrowstudios.com/signup",
+    githubUrl: "/privateproject",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "Restaurant Website",
+    description:
+      "A responsive and visually appealing landing page built using Next.js, Tailwind CSS, and a modern carousel component. Features include user login functionality, add to cart, and order management integrated with Google Sheets.",
+    image: "/returant.png",
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Carousel",
+      "Firebase",
+      "Google Sheets Integration",
+    ],
+    category: "Frontend",
+    liveUrl: "https://the-antcient-sip.vercel.app",
+    githubUrl: "https://github.com/Sarim503/TheAntcientSip",
+    featured: false,
+  },
+  {
+    id: 9,
+    title: "sparrowquill",
+    description:
+      "A fast and engaging social app where users can share posts, follow friends, and join conversations in real time. Designed for smooth performance and an easy-to-use interface, it helps people stay connected, discover trends, and express themselves anytime, anywhere",
+    image: "/sparrowquill.png",
+    tags: ["Next.js", "Tailwind CSS", "Carousel", "JWT (JSON Web Token)"],
+    category: "Frontend",
+    liveUrl: "https://sparrowquill.com/",
+    githubUrl: "/privateproject",
+    featured: false,
+  },
+
+  {
+    id: 10,
     title: "silversparrowstudios",
     description:
       "A forward-thinking company dedicated to building innovative digital solutions. We focus on creating user-friendly, high-performance products that empower individuals and businesses to connect, create, and grow in the digital age.",
@@ -126,39 +171,47 @@ const projects = [
     githubUrl: "/privateproject",
     featured: false,
   },
-  {
-    id: 8,
-    title: "theclarity",
-    description:
-      "A platform dedicated to sharing Islamic knowledge, guidance, and inspiration. We aim to provide authentic content on faith, lifestyle, and spirituality, helping readers strengthen their connection with Islam and foster a mindful, purposeful life.",
-    image: "/clearity.png",
-    tags: ["Next.js", "Tailwind CSS", "Carousel", "framer Motion"],
-    category: "Frontend",
-    liveUrl: "https://www.theclarity.net/",
-    githubUrl: "/privateproject",
-    featured: false,
-  },
-  {
-    id: 9,
-    title: "Skilllob",
-    description:
-      "SkillLob is a dynamic platform connecting users and service providers. Users can easily discover and book a wide range of services, while providers can showcase their skills and offer services to a growing audience. Our mission is to make service discovery, booking, and delivery seamless, empowering both users and providers to collaborate and grow efficiently",
-    image: "/skillob.png",
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Carousel",
-      "JWT (JSON Web Token)",
 
-      "framer Motion",
-    ],
+
+  {
+    id: 12,
+    title: "Trend Magnet",
+    description:
+      "A comprehensive digital marketing platform offering SEO services, social media management, and content creation solutions for businesses looking to enhance their online presence.",
+    image: "/ss1.png",
+    tags: ["Next.js", "Tailwind CSS", "Digital Marketing", "Admin Dashboard"],
     category: "Frontend",
-    liveUrl: "https://www.skills-project.silversparrowstudios.com/signup",
-    githubUrl: "/privateproject",
+    liveUrl: "https://trend-magnenet.vercel.app/",
+    githubUrl: "https://github.com/Sarim503/Trend-magnent",
     featured: false,
   },
+  {
+    id: 13,
+    title: "Trend Magnet Admin",
+    description:
+      "Admin dashboard for Trend Magnet platform providing comprehensive analytics, project management, and client oversight for digital marketing campaigns.",
+    image: "/ss2.png",
+    tags: ["Next.js", "Tailwind CSS", "Admin Dashboard", "Analytics"],
+    category: "Frontend",
+    liveUrl: "https://trend-magnenet-admin.vercel.app/",
+    githubUrl: "https://github.com/Sarim503/trend-magnenet-admin",
+    featured: false,
+  },
+  {
+    id: 14,
+    title: "Calling UI",
+    description:
+      "A modern calling interface with an interactive dialing pad component for seamless communication. Features clean design, intuitive user experience, and real-time call simulation.",
+    image: "/ss4.png",
+    tags: ["Next.js", "Tailwind CSS", "Calling Interface", "Dialing Pad", "Interactive UI"],
+    category: "Frontend",
+    liveUrl: "https://calling-ui-nu.vercel.app/",
+    githubUrl: "https://github.com/Sarim503/calling-UI",
+    featured: false,
+  },
+ 
 ];
-const categories = ["All", "Frontend", "Mobile"];
+const categories = ["All", "Frontend", "Mobile", "Landing Page"];
 
 export default function ProjectsPage() {
   const [searchTerm, setSearchTerm] = useState("");
