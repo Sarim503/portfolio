@@ -13,6 +13,8 @@ export default function AboutPage() {
     "TypeScript",
     "React",
     "Next.js",
+    "PHP",
+    "Laravel",
     "HTML/CSS",
     "Tailwind CSS",
     "Firebase",
@@ -23,11 +25,11 @@ export default function AboutPage() {
 
   const experiences = [
     {
-      title: "Junior Developer",
+      title: "Full Stack Developer",
       company: "Silversparrow Studios",
-      period: "Jan 2025 - Present",
+      period: "14 Jan 2025 - Present",
       description:
-        "Built production-ready frontend websites and full-featured admin panels. Developed a cross-platform desktop app using Electron. Worked in agile sprints and delivered MVPs quickly.",
+        "Deliver full-stack features using Next.js and React interfaces, React Native apps, Laravel and PHP APIs, and NestJS backends. Ship and run workloads with Docker; maintain production-ready web apps and admin tooling while collaborating in agile delivery cycles.",
     },
     {
       title: "Frontend Intern",
@@ -35,6 +37,34 @@ export default function AboutPage() {
       period: "Jul 2024 - Dec 2024",
       description:
         "Contributed to MVP development while gaining hands-on experience with React, Tailwind CSS, and Git workflows in a fast-paced agile environment.",
+    },
+  ];
+
+  const whatIDo = [
+    {
+      title: "Frontend Development",
+      description:
+        "Building fast, responsive UIs using React, Next.js, Tailwind CSS, and modern component systems.",
+    },
+    {
+      title: "Mobile Development",
+      description:
+        "Building cross-platform mobile apps using React Native and Expo.",
+    },
+    {
+      title: "Backend Development",
+      description:
+        "Developing scalable APIs using Laravel, PHP, NestJS, Prisma, PostgreSQL, and REST architecture.",
+    },
+    {
+      title: "DevOps & Deployment",
+      description:
+        "Dockerizing applications, deploying projects on Google Cloud Platform, managing environments, and setting up CI/CD pipelines.",
+    },
+    {
+      title: "Full-Stack Product Development",
+      description:
+        "Building complete products from frontend and backend to database, authentication, deployment, and production workflows.",
     },
   ];
 
@@ -62,23 +92,17 @@ export default function AboutPage() {
             >
               <h3 className="text-xl font-semibold text-foreground">My Story</h3>
               <p>
-                My journey into web development began during university, where I
-                developed a student enrollment advisor project using front-end
-                technologies along with a SQL database. That project helped me
-                understand how design and data come together to solve real-world
-                problems.
+               My journey into web development began during university, where I developed a student enrollment advisor project using front-end technologies along with a SQL database. That project helped me understand how design and data come together to solve real-world problems.
               </p>
               <p>
-                Since then, I’ve continued building my skills through personal
-                projects and continuous practice, focusing on creating
-                user-friendly and visually appealing web interfaces. I enjoy
-                writing clean, scalable code and exploring new tools and best
-                practices to improve my workflow.
+              Since then, I’ve continued building my skills through personal projects and continuous practice, focusing on creating user-friendly, scalable, and visually appealing digital products. I enjoy writing clean code, improving application structure, and exploring modern tools that make development more efficient.
               </p>
               <p>
-                Outside of coding, I enjoy exploring new technologies, reading
-                self-building books, and spending time outdoors to refresh my
-                mind and gather new ideas.
+              Along with frontend development, I have also expanded into backend and DevOps. I work with Laravel/PHP and NestJS to build APIs, manage databases, and structure backend systems. I also have hands-on experience with Docker, Google Cloud Platform deployment, and CI/CD pipelines, which helps me understand how applications move from development to production.
+              </p>
+              Outside of coding, I enjoy exploring new technologies, reading self-improvement books, and spending time outdoors to refresh my mind and gather new ideas.
+              <p>
+
               </p>
             </motion.div>
             <motion.div
@@ -89,25 +113,26 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h3 className="text-xl font-semibold text-foreground">What I Do</h3>
-              <div className="space-y-4">
-                <div className="flex gap-4 items-start">
-                  <div className="w-2 h-2 mt-2 bg-primary rounded-full"></div>
-                  <div>
-                    <h4 className="font-medium">Frontend Development</h4>
-                    <p className="text-muted-foreground text-sm">
-                      Building fast, responsive UIs using React, Next.js & Tailwind.
-                    </p>
+              <div className="flex flex-col gap-4">
+                {whatIDo.map((item) => (
+                  <div
+                    key={item.title}
+                    className="flex gap-4 items-start min-w-0"
+                  >
+                    <div
+                      className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary"
+                      aria-hidden
+                    />
+                    <div className="min-w-0 space-y-1">
+                      <h4 className="font-medium text-foreground">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4 items-start">
-                  <div className="w-2 h-2 mt-2 bg-primary rounded-full"></div>
-                  <div>
-                    <h4 className="font-medium">Mobile Development</h4>
-                    <p className="text-muted-foreground text-sm">
-                      Building cross-platform mobile apps using React Native and Expo.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </motion.div>
           </div>

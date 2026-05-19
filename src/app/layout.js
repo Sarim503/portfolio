@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import NavigationMenuDemo from '@/shared/NavigationMenu'
 import Footer from '@/shared/footer'
+import { FloatingWhatsAppButton } from "@/components/FloatingWhatsAppButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
         <NavigationMenuDemo />
         {children}
         <Footer />
+        <FloatingWhatsAppButton />
       </body>
     </html>
   );

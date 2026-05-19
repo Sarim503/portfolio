@@ -14,38 +14,49 @@ import { motion } from "framer-motion";
 
 export default function ResumePage() {
   const technicalSkills = [
-    { name: "React / Next.js", value: 95 },
-    { name: "Expo (Mobile Development)", value: 70 },
-    { name: "JavaScript / TypeScript", value: 90 },
+    { name: "React / Next.js", value: 90 },
+    { name: "JavaScript / TypeScript", value: 80 },
     { name: "HTML / CSS / Tailwind CSS", value: 90 },
-    { name: "Firebase (Auth, Firestore)", value: 85 },
-    { name: "Git / GitHub", value: 70 },
+    { name: "React Native / Expo", value: 75 },
+    { name: "Laravel / PHP", value: 80 },
+    { name: "NestJS ", value: 80 },
+    { name: "PostgreSQL / SQL / Prisma", value: 75 },
+    { name: "Docker", value: 75 },
+    { name: "GCP Deployment", value: 70 },
+    { name: "CI/CD Pipelines", value: 70 },
+    { name: "Firebase Auth / Firestore", value: 80 },
+    { name: "Git / GitHub", value: 85 },
   ];
 
   const professionalSkills = [
     "Responsive Design",
     "UI/UX Collaboration",
     "Component-Based Architecture",
+    "API Integration",
+    "REST API Development",
+    "Database Management",
+    "Authentication Flows",
     "Performance Optimization",
     "Cross-Browser Compatibility",
     "Clean Code Practices",
     "Version Control",
-    "Firebase Integration",
-    "Mobile-First Design",
+    "Dockerized Deployment",
+    "Cloud Deployment",
+    "CI/CD Workflow",
     "Debugging & Testing",
+    "Mobile-First Design",
+    "Full-Stack Development",
   ];
 
   const workExperience = [
     {
-      title: "Junior Developer",
+      title: "Full Stack Developer",
       company: "Silver Sparrow Studios, Islamabad",
-      period: "January 2025-Present",
+      period: "January 14, 2025 – Present",
       points: [
-        "Developed and maintained front-end applications using React and Redux",
-        "Optimized application performance, reducing load time by 35%",
-        "Integrated third-party APIs and services to enhance application functionality",
-        "Participated in agile development processes, including daily stand-ups and sprint planning",
-        "Built responsive designs that adapt seamlessly to various devices and screen sizes, improving accessibility and user engagement.",
+        "Build Next.js and React web UIs, React Native apps, Laravel/PHP APIs, and NestJS backends for internal and client projects",
+        "Containerise services with Docker and own features end-to-end from schemas to deployment-ready builds",
+        "Develop scalable frontend, backend, and mobile solutions with clean code, API integration, and production-ready deployment.",
       ],
     },
     {
@@ -72,18 +83,19 @@ export default function ResumePage() {
         viewport={{ amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="w-40 h-40 relative rounded-full overflow-hidden border-4 border-border shadow-lg">
+        <div className="w-40 h-40 relative mx-auto md:mx-0 shrink-0 rounded-full overflow-hidden border-4 border-border shadow-lg">
           <Image
-            src="/sss.png"
-            alt="Profile Photo"
+            src="/sarimboy.png"
+            alt="Muhammad Sarim Khan"
             fill
             className="object-cover"
+            sizes="160px"
             priority
           />
         </div>
         <div className="flex-1 text-center md:text-left space-y-4">
           <h1 className="text-4xl font-bold">Muhammad Sarim Khan</h1>
-          <h2 className="text-2xl text-muted-foreground">Junior Frontend Developer</h2>
+          <h2 className="text-2xl text-muted-foreground">Full Stack Developer</h2>
 
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
             <Badge variant="outline" className="px-3 py-1 text-sm flex items-center gap-1">
@@ -132,7 +144,9 @@ export default function ResumePage() {
       >
         <h2 className="text-2xl font-bold border-b pb-2 mb-4">Professional Summary</h2>
         <p className="text-muted-foreground">
-          I am a passionate and results-driven web developer with strong expertise in Next.js and React.js. With a solid foundation in front-end development, I focus on building scalable, high-performance web applications. I am experienced in creating intuitive user interfaces and solving complex problems through clean and efficient code. Always eager to learn and grow, I aim to contribute to impactful projects and deliver exceptional user experiences.
+        I am a passionate full-stack developer with experience in React.js, Next.js, React Native, Laravel/PHP, and NestJS. I build scalable web and mobile applications with clean code, strong UI, and efficient backend architecture.
+
+I also have hands-on knowledge of Docker, Google Cloud Platform deployment, CI/CD pipelines, and database-driven applications. I enjoy solving complex problems, learning modern technologies, and delivering reliable digital products with smooth user experiences.
         </p>
       </motion.section>
 
@@ -149,14 +163,14 @@ export default function ResumePage() {
               viewport={{ amount: 0.3 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="absolute w-4 h-4 bg-background border-2 border-primary rounded-full -left-[9px] top-1"></div>
+              <div className="absolute w-3.5 h-3.5 rounded-full border-2 border-muted-foreground bg-background -left-[8px] top-1.5" aria-hidden />
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-1 mb-2">
                 <h3 className="text-xl font-semibold">{exp.title}</h3>
                 <div className="text-sm text-muted-foreground">
                   <span className="font-medium">{exp.company}</span> | {exp.period}
                 </div>
               </div>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+              <ul className="list-outside list-disc space-y-3 ps-5 sm:ps-6 text-muted-foreground leading-relaxed marker:text-muted-foreground">
                 {exp.points.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
@@ -198,15 +212,15 @@ export default function ResumePage() {
             viewport={{ amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <Card>
-              <CardContent className="pt-6">
-                <h3 className="text-lg font-semibold mb-4">Technical Skills</h3>
-                <div className="space-y-4">
+            <Card className="h-full">
+              <CardContent className="pt-6 pb-6 flex flex-col h-full">
+                <h3 className="text-lg font-semibold mb-4 shrink-0">Technical Skills</h3>
+                <div className="space-y-3.5 flex-1">
                   {technicalSkills.map((skill, i) => (
-                    <div key={i}>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm font-medium">{skill.name}</span>
-                        <span className="text-sm text-muted-foreground">{skill.value}%</span>
+                    <div key={skill.name}>
+                      <div className="flex justify-between gap-3 mb-1">
+                        <span className="text-sm font-medium min-w-0 break-words">{skill.name}</span>
+                        <span className="text-sm text-muted-foreground shrink-0 tabular-nums">{skill.value}%</span>
                       </div>
                       <Progress value={skill.value} className="h-2" />
                     </div>
@@ -223,12 +237,14 @@ export default function ResumePage() {
             viewport={{ amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <Card>
-              <CardContent className="pt-6">
-                <h3 className="text-lg font-semibold mb-4">Professional Skills</h3>
-                <div className="flex flex-wrap gap-2">
-                  {professionalSkills.map((skill, i) => (
-                    <Badge key={i} className="px-3 py-1">{skill}</Badge>
+            <Card className="h-full">
+              <CardContent className="pt-6 pb-6 flex flex-col h-full">
+                <h3 className="text-lg font-semibold mb-4 shrink-0">Professional Skills</h3>
+                <div className="flex flex-wrap gap-2 content-start flex-1">
+                  {professionalSkills.map((skill) => (
+                    <Badge key={skill} className="px-3 py-1 max-w-full break-words whitespace-normal text-left leading-snug">
+                      {skill}
+                    </Badge>
                   ))}
                 </div>
               </CardContent>

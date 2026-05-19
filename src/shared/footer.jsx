@@ -7,7 +7,7 @@ const footer = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-row items-center justify-end">
             <p className="text-muted-foreground text-sm">
-              Sarim Khan. All rights reserved.
+              © {new Date().getFullYear()} Sarim Khan. All rights reserved.
             </p>
           </div>
         </div>
